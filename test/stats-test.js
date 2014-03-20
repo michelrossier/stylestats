@@ -88,12 +88,18 @@ describe('Custom Object StyleStats!', function() {
     });
 });
 
-
 describe('Remote Pattern StyleStats!', function() {
+    //it('should returns file size', function(done) {
+    //    var requestStats = new StyleStats('http://t32k.me/static/blog/skelton.css?query');
+    //    requestStats.parse(function(requestResult) {
+    //        assert.equal(requestResult.size, 15419);
+    //        done();
+    //    });
+    //});
     it('should returns file size', function(done) {
-        var requestStats = new StyleStats('http://t32k.me/static/blog/skelton.css?query');
+        var requestStats = new StyleStats('https://dl.dropboxusercontent.com/u/356242/test/stats/async.html');
         requestStats.parse(function(requestResult) {
-            assert.equal(requestResult.size, 15419);
+            assert.equal(requestResult.size, 55);
             done();
         });
     });
